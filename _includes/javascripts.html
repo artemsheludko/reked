@@ -1,6 +1,15 @@
 <!-- begin javascript files -->
 <script src="{{ site.baseurl }}/js/vendors/jquery-3.3.1.min.js"></script>
 <script src="{{ site.baseurl }}/js/vendors/simple-jekyll-search.min.js"></script>
+<script>
+    SimpleJekyllSearch({
+    searchInput: document.getElementById("js-search-input"),
+    resultsContainer: document.getElementById("js-results-container"),
+    json: "/search.json",
+    searchResultTemplate: '<li class="search-results__item  wow fadeIn"><a class="search-results__link" href="{url}">{title}</a></li>',
+    noResultsText: '<li class="no-results">No results found</li>'
+  });
+</script>
 <script src="{{ site.baseurl }}/js/vendors/instafeed.min.js"></script>
 <script src="{{ site.baseurl }}/js/vendors/jquery.fitvids.js"></script>
 <script src="{{ site.baseurl }}/js/vendors/transition.js"></script>
