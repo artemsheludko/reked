@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+      <h1 class="archive-title">{{ page.tag }}</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    {% for post in page.posts %}
+      {% include article-content.html %}
+    {% endfor %}
+  </div>
+</div>

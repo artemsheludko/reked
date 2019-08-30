@@ -1,0 +1,34 @@
+/* Button Top */
+.top {
+  position: fixed;
+  bottom: 40px;
+  right: -100px;
+	z-index: 1;
+	width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+	background-color: $light-gray;
+	color: $dark;
+	cursor: pointer;
+	transition: all .25s ease;
+	opacity: .7;
+  
+  &.is-active {
+    right: 40px;
+  }
+  
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  .top {
+    bottom: 25px;
+    
+    &.is-active {
+      right: 30px;
+    }
+  }
+}

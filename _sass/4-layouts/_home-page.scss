@@ -1,0 +1,54 @@
+/* Article */
+.article {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid $border-color;
+}
+
+.article__title {
+  margin-bottom: 20px;
+  font-size: 21px;
+
+  a {
+    &:hover {
+      color: $brand-color;
+    }
+  }
+}
+
+.article__excerpt {
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 25px;
+  color: $gray;
+}
+
+.article-info {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  color: $gray;
+  
+  a {
+    display: inline-block;
+    color: lighten($dark, 10%);
+    border-bottom: 1px dotted #ccc;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.article__tag {
+  &:after {
+    content: ",";
+    display: inline-block;
+  }
+  
+  &:last-child {
+    &:after {
+      content: "";
+    }
+  }
+}

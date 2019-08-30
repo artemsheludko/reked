@@ -1,0 +1,26 @@
+/* Page */
+.page-head {
+  margin-bottom: 40px;
+  
+  .page-title {
+    margin-bottom: 20px;
+    font-size: 33px;
+    line-height: 50px;
+  }
+}
+
+/* Page Image */
+.page-image {
+  display: block;
+  margin-bottom: 40px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f5f5f5;
+  
+  &:after {
+    content: "";
+    display: table;
+    padding-top: 60%;
+  }
+}

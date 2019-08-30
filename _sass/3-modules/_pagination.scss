@@ -1,0 +1,35 @@
+/* Pagination */
+.pagination {
+  margin-top: 30px;
+  
+  @media only screen and (max-width: $mobile) {
+    margin-top: 0;
+  }
+}
+
+.pagination__list {
+  text-align: center;
+  
+  .previous-link,
+  .next-link,
+  .prev-disabled,
+  .next-disabled {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-right: 1px solid #eee;
+  }
+
+  .next-link,
+  .next-disabled {
+    border-right: none;
+  }
+
+  .prev-disabled,
+  .next-disabled  {
+    color: #c6c6c6;
+  }
+}

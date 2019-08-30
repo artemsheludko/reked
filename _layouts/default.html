@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+  {% if site.google-analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
+
+  {% include header.html %}
+  <!-- begin content -->
+  <main class="content" aria-label="Content">
+    <!-- begin wrapper-page -->
+    <div class="wrapper-page">
+      {{ content }}
+    </div>
+    <!-- end wrapper-page -->
+  </main> 
+  <!-- end content -->
+
+  <div class="top" title="Top"><i class="ion ion-ios-arrow-up"></i></div>
+  
+  {% include footer.html %}
+  
+  {% include javascripts.html %}
+</body>
+
+</html>

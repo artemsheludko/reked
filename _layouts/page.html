@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="container">
+	<div class="row">
+		<div class="col col-12">
+			<h1 class="page__title wow fadeInUp">{{ page.title | escape }}</h1>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col col-12">
+			<!-- begin page -->
+			<article class="page wow fadeInUp" data-wow-delay=".2s">
+				{% if page.image %}	
+					<div class="page-image" style="background-image: url({{site.baseurl}}/images/{{page.image}})"></div>
+				{% endif %}
+				<div class="page__content">
+					{{ content }}
+				</div>
+			</article>
+			<!-- end page -->
+		</div>
+	</div>
+</div>

@@ -1,0 +1,55 @@
+<!-- begin header -->
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="header-box">
+          <!-- begin logo -->
+          <div class="logo">
+            <a class="logo__link" href="/">
+            {%if site.logo %}
+              <img class="logo__image" src="{{ site.baseurl }}/images/{{ site.logo }}" alt="{{ site.title }}">
+            {% else %}
+              {{ site.title }}
+            {% endif %}
+            </a>
+          </div>
+          <!-- end logo -->
+    
+          <!-- begin main-nav -->
+          <nav class="main-nav">
+            
+            <div class="main-nav__box">
+              <i class="nav__close ion ion-md-close"></i> 
+              <ul class="nav__list list-reset">
+                <li class="nav__item">
+                  <a href="/" class="nav__link">Home</a>
+                </li>
+                {% for page in site.pages %}
+                  {% unless page.name == 'tags.html' or page.name == '404.html' %}
+                {% if page.title %}
+                <li class="nav__item">
+                  <a href="{{ page.url | prepend: site.baseurl }}" class="nav__link">{{ page.title }}</a>
+                </li>
+                {% endif %}
+                  {% endunless %}
+                {% endfor %}
+              </ul>
+            </div>
+            
+          </nav>
+          <!-- end main-nav -->
+          
+          <div class="nav-buttons">
+            <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+            <i class="nav__icon nav__icon-search ion ion-md-search"></i>
+          </div>
+          
+          <div class="header__overlay"></div>
+        </div>
+      </div>
+      {% include search.html %}
+    </div>
+  </div>
+</header>
+<!-- end header -->
