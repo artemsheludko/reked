@@ -6,7 +6,7 @@
         <div class="header-box">
           <!-- begin logo -->
           <div class="logo">
-            <a class="logo__link" href="/">
+            <a class="logo__link" href="{{ site.baseurl }}/">
             {%if site.logo %}
               <img class="logo__image" src="{{ site.baseurl }}/images/{{ site.logo }}" alt="{{ site.title }}">
             {% else %}
@@ -15,12 +15,12 @@
             </a>
           </div>
           <!-- end logo -->
-    
+
           <!-- begin main-nav -->
           <nav class="main-nav">
-            
+
             <div class="main-nav__box">
-              <i class="nav__close ion ion-md-close"></i> 
+              <i class="nav__close ion ion-md-close"></i>
               <ul class="nav__list list-reset">
                 <li class="nav__item">
                   <a href="/" class="nav__link">Home</a>
@@ -36,15 +36,15 @@
                 {% endfor %}
               </ul>
             </div>
-            
+
           </nav>
           <!-- end main-nav -->
-          
+
           <div class="nav-buttons">
             <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
             <i class="nav__icon nav__icon-search ion ion-md-search"></i>
           </div>
-          
+
           <div class="header__overlay"></div>
         </div>
       </div>
