@@ -1,7 +1,7 @@
 title: Reked
-logo:  # You can add own logo image.
+logo: "images/logo.svg" # You can add own logo image.
 description: Minimalistic Theme for Jekyll
-baseurl: "/reked" # The subpath of your site, e.g. /blog
+baseurl: "" # The subpath of your site, e.g. /blog
 url: "" # The base hostname & protocol for your site, e.g. http://example.com
 
 # Author Settings
@@ -21,19 +21,19 @@ email: forexample@website.com # Add your Email address
 hero: true # To enable the section hero, use the value true. To turn off use the value false.
 hero-title: Raked Minimalistic Theme # Add your hero title
 hero-subtitle: For those who love simplicity # Add your hero subtitle
-hero-image: 14.jpg # Add background image in section hero
+hero-image: images/14.jpg # Add background image in section hero
 
 # Footer
-footer-image: 14.jpg # Add background image in footer
+footer-image: images/14.jpg # Add background image in footer
 
 # Comment Section (Disqus)
 disqus-identifier: mr-brown # Add your shortname for Disqus Comment. For example mr-brown
 
 # Google Analytics
-google-analytics: # Add your identifier. For example UA-99631805-1.
+google-analytics: "" # Add your identifier. For example UA-99631805-1.
 
 # Newsletter
-mailchimp: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+mailchimp: "" # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
 
 # Build settings
 markdown: kramdown

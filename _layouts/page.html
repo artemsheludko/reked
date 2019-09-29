@@ -15,7 +15,7 @@ layout: default
 			<!-- begin page -->
 			<article class="page wow fadeInUp" data-wow-delay=".2s">
 				{% if page.image %}	
-					<div class="page-image" style="background-image: url({{site.baseurl}}/images/{{page.image}})"></div>
+					<div class="page-image" style="background-image: url('{{ page.image | relative_url }}')"></div>
 				{% endif %}
 				<div class="page__content">
 					{{ content }}

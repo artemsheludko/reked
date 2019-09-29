@@ -36,8 +36,8 @@ layout: default
 			<!-- begin post -->
 			<article class="post wow fadeInUp" data-wow-delay=".2s">
 	
-			{% if page.image %}
-				<div class="post-image" style="background-image: url({{site.baseurl}}/images/{{page.image}})"></div>
+			{% if page.image and page.image != "" %}
+				<div class="post-image" style="background-image: url('{{ page.image | relative_url }}')"></div>
 			{% endif %}
 	
 				<div class="post__content">
@@ -75,9 +75,9 @@ layout: default
 						{% for post in site.posts offset:0 limit:3 %}
 						<div class="recent-posts">
 							<div class="recent-posts__content">			
-								{% if post.image %}
+								{% if post.image and post.image != "" %}
 									<a class="recent-posts__image wow fadeIn" href="{{ post.url }}"
-										style="background-image: url({{site.baseurl}}/images/{{post.image}})"></a>
+										style="background-image: url('{{ post.image | relative_url }}')"></a>
 								{% else %}
 								{% endif %}
 									<p class="recent-posts__title"><a href="{{ post.url }}">{{ post.title }}</a></p>
