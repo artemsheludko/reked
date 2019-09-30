@@ -1,0 +1,219 @@
+stackbitVersion: "~0.2.0"
+ssgName: jekyll
+buildCommand: "bundle install && bundle exec jekyll build" 
+staticDir: ""
+uploadDir: images
+publishDir: "_site"
+pagesDir: ""
+pageTemplateKey: layout
+models:
+  config:
+    type: config
+    label: Global Site Config
+    fields:
+      - type: string
+        name: title
+        label: Site Title
+        description: The title displayed in the site header, title tag.
+      - type: image
+        name: logo
+        label: Logo
+        description: The logo for the site.
+      - type: string
+        name: description
+        label: Description
+        description: The default description displayed in meta tags.
+      - type: string
+        name: baseurl
+        label: Baseurl
+        description: The subpath of your site, e.g. /blog, for generating urls.
+      - type: string
+        name: url
+        label: Url
+        description: The base hostname & protocol for your site, e.g. http://example.com
+      - type: object
+        name: author
+        label: Author Settings
+        fields:
+          - type: string
+            name: name
+            label: Author name
+            description: The name of the author.
+          - type: string
+            name: bio
+            label: Bio
+            description: The short bio of the author.
+      - type: string
+        name: twitter
+        label: Twitter
+        description: Your Twitter url.
+      - type: string
+        name: facebook
+        label: Facebook
+        description: Your Facebook url.
+      - type: string
+        name: dribbble
+        label: Dribbble
+        description: Your Dribbble url.
+      - type: string
+        name: instagram
+        label: Instagram
+        description: Your Instagram url.
+      - type: string
+        name: pinterest
+        label: Pinterest
+        description: Your Pinterest url.
+      - type: string
+        name: email
+        label: Email address
+        description: Your email address.
+      - type: boolean
+        name: hero
+        label: Enable hero section?
+        default: true
+      - type: string
+        name: hero-title
+        label: Hero title
+        description: The title of the hero section.
+      - type: string
+        name: hero-subtitle
+        label: Hero subtitle
+        description: The subtitle of the hero section.
+      - type: image
+        name: hero-image
+        label: Hero image
+        description: The background image of the hero section.
+      - type: image
+        name: footer-image
+        label: Footer image
+        description: The background image of the footer section.
+      - type: string
+        name: disqus-identifier
+        label: Disqus shortname
+        description: Your shortname for Disqus Comments. For example, mr-brown.
+      - type: string
+        name: google-analytics
+        label: Google Analytics
+        description: Your Google Analytics identifier. For example, UA-99631805-1.
+      - type: string
+        name: mailchimp
+        label: Newsletter
+        description: Your MailChimp form identifier. For example, blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e.
+      - type: string
+        name: markdown
+        label: The Markdown renderer.
+        hidden: true
+      - type: string
+        name: permalink
+        label: Permalink
+        description: The global permalink.
+      - type: list
+        name: plugins
+        label: Plugins
+        description: The list of plugins.
+        items:
+          type: string
+      - type: number
+        name: paginate
+        label: Paginate
+        description: The number of posts per page.
+      - type: string
+        name: paginate_path
+        label: Pagination Path
+        description: The destination of the pagination pages.
+      - type: list
+        name: defaults
+        label: Front Matter Defaults
+        description: The default front matter options.
+        items:
+          type: object
+          fields:
+            - type: object
+              name: scope
+              label: Scope
+              fields:
+                - type: string
+                  name: path
+                  label: Path
+                  required: true
+            - type: object
+              name: values
+              label: Values
+              fields:
+                - type: string
+                  name: permalink
+                  label: Permalink
+                  required: true
+      - type: string
+        name: tag_page_dir
+        label: Tag Page Directory
+        description: The destination of the tag page.
+      - type: string
+        name: tag_page_layout
+        label: Tag Page Layout
+        description: The tag page layout.
+      - type: string
+        name: tag_permalink_style
+        label: Tag Permalink Style
+        description: The tag permalink style.
+      - type: list
+        name: include
+        label: Include
+        description: Directories and/or files to include in the conversion.
+        items:
+          type: string
+      - type: object
+        name: sass
+        label: Sass Configuration
+        hidden: true
+        fields:
+          - type: string
+            name: sass_dir
+            label: Sass Files Directory
+          - type: string
+            name: style
+            label: Sass Output Style
+  post:
+    type: page
+    label: Post
+    template: post
+    folder: _posts
+    fields:
+      - name: title
+        type: string
+        label: Title
+        description: The title of the post.
+        required: true
+      - name: date
+        type: date
+        label: Date
+        description: The publish date of the post.
+        required: true
+      - name: image
+        type: image
+        label: Featured Image
+        description: The featured image of the post.
+      - name: tags
+        type: list
+        label: Tags
+        items:
+          type: string
+  page:
+    type: page
+    label: Page
+    template: page
+    folder: _pages
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+        required: true
+      - type: string
+        name: permalink
+        label: Permalink
+        description: The permalink of the page.
+      - type: image
+        name: image
+        label: Featured Image
+        description: The featured image of the page.
