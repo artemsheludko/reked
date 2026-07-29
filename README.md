@@ -18,7 +18,7 @@
 
 ### Demo
 
-Check the theme in action [Demo](https://reked.netlify.com/)
+Check the theme in action [Demo](https://reked.netlify.app/)
 
 The main page would look like this:
 
